@@ -3,37 +3,43 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'poppins',sans-serif;
+    color: white;
+   
+}
+html{
+    scroll-behavior: smooth;
 }
 
 body{
     background: #080808;
-    color: #fff;
+    color: #fff ; 
 }
-
 #header{
     width: 100%;
     height: 100vh;
 
 }
-#profile-sec{
-    width: 100%;
-    height: 100vh;
+.navbar{
+    color: #fff !important;
 }
-/* #projects-sec{
-    width: 100%;
-    height: 100vh;
-} */
-
-.container{
-    padding: 10px ;
-}
-
-nav{
+.navbar-nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 10px;
+    font-size: large;
+}
+/* nav ul li a{
+    color:#fff;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+} */
 
 .left{
     font-size: 25px;
@@ -43,50 +49,48 @@ nav{
 .left span{
     color: rgb(204, 27, 27);
 }
-.resume{
-    margin-top: 10px;
-    margin-left: -135px;
-}
-
-nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
-    font-size: large;
-}
-nav ul li a{
-    color:#fff;
+.navbar-nav li a{
+    color:#fff !important;
     text-decoration: none;
     font-size: 20px;
     position: relative;
 }
-nav ul li a::after{
+.navbar-nav li a:hover{
+    color: #fff !important;
+}
+.nav-link.active {
+    color: #fff !important; /* Ensure the active link text remains white */
+    
+}
+
+.navbar-nav li a::after{
     content: '';
     width: 0;
     height: 3px;
     background: #ff004f;
     position: absolute;
     left: 0;
-    bottom: -6px;
+    bottom: -2px;
     transition: 0.5s;
 }
-nav ul li a:hover::after{
+
+.navbar-nav li a:hover::after{
     width: 100%;
+    
 }
 
 /* main section */
-.first{
-    display: flex;
-    justify-content: space-around;
-    margin: 23px 0;
-}
-.first div{
-    width: 30%;
-}
 
 .left-1{
-    font-size: 1.4rem;
-    margin-top:30px;
+    margin-left: 150px;
+    
+}
+.left-1 h1{
+    margin-top: 150px;
+}
+.resume{
+    margin-top: 10px;
+    margin-left: -135px;
 }
 
 .main-heading {
@@ -102,9 +106,8 @@ nav ul li a:hover::after{
 
 .right-1 img{  
     height: 500px;
-     margin-top:30px;
-     /* margin-left: 100px; */
-     margin-right: 100px;
+    margin-top:60px;
+    margin-left: 200px;
 }
 
 /* profile stylings */
@@ -120,10 +123,7 @@ nav ul li a:hover::after{
     font-size: 22px;
 }
 /* education stylings */
-.education{
-    flex-basis: 51%;
-   
-}
+
 .education-heading{
     font-weight: bold;
     font-family: "Playfair Display", serif;
@@ -142,12 +142,7 @@ nav ul li a:hover::after{
    flex-basis: 30%;
    
 }
-.technical-skills{
-    /* text-align: center; */
-    margin-left: 200px;
-    flex-basis: 52%;
-   
-}
+
 
 .technical-skills h1{
     font-weight: bold;
@@ -179,7 +174,7 @@ nav ul li a:hover::after{
 .project-heading{
     font-weight: bold;
     font-family: "Playfair Display", serif;
-    margin-top: 220px;
+    
 }
 
 /* paper styling */
@@ -197,17 +192,11 @@ nav ul li a:hover::after{
     font-family: "Playfair Display", serif;
     margin-bottom: 30px;
 }
-.leadership{
-    flex-basis: 45%;
-    
-}
+
 .leadership h4{
     font-weight: bold;
 }
-.papers{
-    flex-basis: 50%;
-    margin-left: 200px;
-}
+
 .papers h4{
     font-weight: bold;
 }
@@ -236,26 +225,28 @@ nav ul li a:hover::after{
     margin-bottom: 200px;
 }
 
-.row1{
-    display: flex;
+
+
+.contact-left h1{
+    font-size: 2.9rem;
+    font-weight: bold;
+    color: #ff004f;
 }
-.contact-left{
-    flex-basis: 35%;
-}
-.contact-right{
-    flex-basis: 60%;
-    /* margin-left: 100px; */
-}
+
 .contact-left p{
     margin-top: 20px;
+    font-size: 1.5rem;
 }
 .contact-left p i{
     margin-right: 10px;
-    font-size: 20px;
+    font-size: 1.5rem;
 }
 
 .social-icons{
     margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    
 }
 .social-icons a{
     text-decoration: none;
@@ -303,134 +294,52 @@ form input,form textarea{
     margin-top: 20px;
 }
 
+/* media queries start */
 
-/* For small devices (mobile portrait, up to 576px) */
-@media (max-width: 576px) {
-    .first {
-        flex-direction: column;
-        align-items: center;
+@media screen and (max-width:600px){
+    .profile-section h1{
+        margin-top: -150px;
     }
-    .first .left-1, .first .right-1 {
+    .technical-skills h1{
+        margin-top: 40px;
+    }
+    .papers h1{
+        margin-top: 40px;
+    }
+    .social-icons{
+        margin-bottom: 30px;
+    }
+    .certificates{
+        margin-left: -150px;
+    }
+    .itemdev img{
         width: 100%;
-        text-align: center;
+        height: 100vh;
     }
-
-    .left-1 {
-        font-size: 1.2rem;
-    }
-
-    .main-heading {
-        font-size: 2.5rem;
-        margin-left: 0;
-    }
-
-    .right-1 img {
+    .itemdata img{
         width: 100%;
-        height: auto;
-        margin-top: 20px;
+        height: 100vh;
     }
-
-    nav ul li {
-        font-size: 18px;
+    .left-1 h1 {
+        margin-left: -170px;
+        font-size: 25px;
     }
-
-    .container {
-        padding: 10px;
+    .left-1 .resume{
+        margin-left: -170px;
+    }
+    .right-1 img{
+        margin-top: -200px;
+        height: 300px;
+        position: absolute;
+        left: 140px;
+    }  
+    .navbar-toggler{
+        background-color: #fff;       
     }
 }
 
-/* For tablets (landscape and portrait, between 576px and 768px) */
-@media (max-width: 768px) {
-    .first {
-        flex-direction: column;
-        align-items: center;
-    }
-    .first .left-1, .first .right-1 {
-        width: 100%;
-        text-align: center;
-    }
 
-    .right-1 img {
-        width: 80%;
-        height: auto;
-    }
 
-    .profile-body {
-        font-size: 18px;
-        padding: 0 10%;
-    }
 
-    .third-section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .technical-skills {
-        margin-left: 0;
-        flex-basis: 100%;
-        text-align: center;
-    }
-
-    .projects {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-
-    .fifth-section {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .contact-right form input, .contact-right form textarea {
-        font-size: 16px;
-    }
-
-    .form-btn {
-        font-size: 16px;
-        padding: 10px 20px;
-    }
-}
-
-/* For larger screens (between 768px and 1024px) */
-@media (max-width: 1024px) {
-    .first {
-        flex-direction: row;
-    }
-    .first .left-1, .first .right-1 {
-        width: 50%;
-    }
-
-    .left-1 {
-        font-size: 1.4rem;
-    }
-
-    .main-heading {
-        font-size: 3rem;
-        margin-left: 0;
-    }
-
-    .right-1 img {
-        width: 80%;
-        height: auto;
-    }
-
-    .profile-body {
-        font-size: 20px;
-        padding: 0 15%;
-    }
-
-    .third-section {
-        flex-basis: 50%;
-    }
-
-    .technical-skills {
-        flex-basis: 50%;
-        margin-left: 0;
-    }
-
-    .projects {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-}
 
 
