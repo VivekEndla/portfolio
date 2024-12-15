@@ -281,6 +281,11 @@ form input,form textarea{
     margin-top: 10px;
     cursor: pointer;
 }
+#msg{
+    color: #61b752;
+    margin-top: 10px;
+    display: block;
+}
 .copyright{
     width: 100%;
     text-align: center;
