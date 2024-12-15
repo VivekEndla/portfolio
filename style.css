@@ -336,6 +336,7 @@ form input,form textarea{
         margin-top: -200px;
         height: 250px;
         position: absolute;
+        left:50px;
         
     }  
     .navbar-toggler{
