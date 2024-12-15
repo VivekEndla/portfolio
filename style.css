@@ -169,7 +169,7 @@ nav ul li{
     margin-top: 30px;
 }
 .threep{
-    margin-top: 80px;
+    margin-top: 50px;
 }
 .project-heading{
     font-weight: bold;
@@ -342,6 +342,9 @@ form input,form textarea{
     .navbar-toggler{
         background-color: #fff;
          align-items: end; 
+    }
+     .threep{
+        margin-top: 0px;
     }
 }
 
