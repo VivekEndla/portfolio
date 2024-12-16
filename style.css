@@ -358,12 +358,18 @@ form input,form textarea{
 }
 
 /* for medium screens like tablets */
- @media screen and (min-width:601px)and(max-width:1000px){
+ @media screen and (min-width:601px) and (max-width:1000px){
     .profile-section h1{
-        margin-top: -150px;
+        margin-top: 250px;
     }
     .profile-section{
-        text-align: center;
+        text-align: start;
+    }
+    .technical-skills h1{
+        margin-top: 20px;
+    }
+    .papers h1{
+        margin-top: 20px;
     }
     
     .social-icons{
@@ -382,7 +388,7 @@ form input,form textarea{
     }
     .left-1 h1 {
         margin-left: -150px;
-        font-size: 25px;
+        font-size: 30px;
     }
     .left-1 .resume{
         margin-left: -150px;
@@ -393,7 +399,9 @@ form input,form textarea{
         font-size: 20px;
     }
     .right-1 img{
-        margin-top: -200px ;
+        /* margin-top: -200px ; */
+        position: absolute;
+        bottom: 10%;
          height: 400px;
         position: absolute;
         left: 200px;
@@ -406,7 +414,11 @@ form input,form textarea{
     .threep{
         margin-top: 0px;
     }
+    .copyright{
+        width: 100%;
+    }
 } 
+ 
 
 
 
