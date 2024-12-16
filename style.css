@@ -301,12 +301,14 @@ form input,form textarea{
 }
 
 /* media queries start */
-
+/* for small screens like mobile phones */
 @media screen and (max-width:600px){
     .profile-section h1{
-        margin-top: -150px;
+        margin-top: 100px;
     }
-    
+    .profile-section{
+        text-align: start;
+    }
     .technical-skills h1{
         margin-top: 40px;
     }
@@ -328,31 +330,85 @@ form input,form textarea{
         height: 720px;
     }
     .left-1 h1 {
-        margin-left: -160px;
-        font-size: 20px;
+        margin-left: -150px;
+        font-size: 22px;
     }
     .left-1 .resume{
-        margin-left: -160px;
+        margin-left: -150px;
+        
     }
-     .resume{
+    .resume{
         padding: 5px 5px;
-        font-family: 10px;
+        font-size: 16px;
     }
     .right-1 img{
         margin-top: -200px;
         height: 250px;
         position: absolute;
-        left:50px;
+        left: 90px;
         
     }  
     .navbar-toggler{
-        background-color: #fff;
-         align-items: end; 
+        background-color: #fff;    
+        align-items: end;   
     }
-     .threep{
+    .threep{
         margin-top: 0px;
     }
 }
+
+/* for medium screens like tablets */
+ @media screen and (min-width:601px)and(max-width:1000px){
+    .profile-section h1{
+        margin-top: -150px;
+    }
+    .profile-section{
+        text-align: center;
+    }
+    
+    .social-icons{
+        margin-bottom: 30px;
+    }
+    .certificates{
+        margin-left: -150px;
+    }
+    .itemdev img{
+        width: 100%;
+        height: 720px;
+    }
+    .itemdata img{
+        width: 100%;
+        height: 720px;
+    }
+    .left-1 h1 {
+        margin-left: -150px;
+        font-size: 30px;
+    }
+    .left-1 .resume{
+        margin-left: -150px;
+        
+    }
+    .resume{
+        padding: 5px 5px;
+        font-size: 20px;
+    }
+    .right-1 img{
+        margin-top: -200px ;
+         height: 400px;
+        position: absolute;
+        left: 200px;
+        
+    }  
+    .navbar-toggler{
+        background-color: #fff;    
+        align-items: end;   
+    }
+    .threep{
+        margin-top: 0px;
+    }
+} 
+
+
 
 
 
