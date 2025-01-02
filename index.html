@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Vivek Portfolio</title>
      <!-- Bootstrap CSS -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -55,7 +55,7 @@
           <div class="col-12 col-sm-12 col-md-6 col-lg-6">
             <section class="first"> 
               <div class="right-1">
-                <img src="./asserts/endla vivek.png" alt="" class="img-fluid img-thumbnail">
+                <img src="./asserts/pic.jpg" alt="" >
               </div>
           </section>
           </div> 
@@ -146,7 +146,8 @@
                 <div>
                     <h4 class="fw-bold mb-4">Portfolio Website</h4>
                     <p>Designed and developed a personal portfolio website to showcase my skills, projects, and achievements. Built using HTML, CSS, and JavaScript, it ensures responsiveness and visual appeal.</p>
-                </div>
+                    <a href="https://vivekportfolio-weld.vercel.app/" class="button1 portfolio" download>Portfolio link</a>
+                  </div>
     
             </div>
         </div>
@@ -178,38 +179,41 @@
             
     </div>
     <hr>
-    <div class="container sixth-section">
-        <h1 class="text-center creti-heading">CERTIFICATES</h1>
-        <div class="certificates" >
-            <div id="carouselExampleAutoplaying" class="carousel slide " data-bs-ride="carousel" style="max-width: 1000px; max-height: 600px; margin-left: 150px; ">
-                <div class="carousel-inner w-100 certificate-slide">
-                  <div class="carousel-item itemdev active">
-                    <img src="./asserts/Developing Soft Skills And Personality.jpg" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item itemdata">
-                    <img src="./asserts/Data Base Management System.jpeg" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item itemsoc">
-                    <img src="./asserts/Endla Vivek soc.png" class="d-block w-100" alt="..." style="height: 720px;">
-                  </div>
-                  <div class="carousel-item itemhev">
-                    <img src="./asserts/hev certificate.jpg" class="d-block w-100" alt="..." style="height: 720px;">
-                  </div>
-                  <div class="carousel-item itempy">
-                    <img src="./asserts/python certi.jpg" class="d-block w-100" alt="..." style="height: 720px;">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-        </div>
-    </div>
+    <section class="slideshow-container">
+      <h1 class="text-center Certifications">CERTIFICATIONS</h1>
+  
+      <!-- Slides -->
+      <div class="slides">
+        <img src="./asserts/Data Base Management System.jpeg" alt="DBMS Certificate">
+      </div>
+      <div class="slides">
+        <img src="./asserts/Developing Soft Skills And Personality.jpg" alt="Dvelopment of soft skills Certificate">
+      </div>
+      <div class="slides">
+        <img src="./asserts/python certi.jpg" alt="Udemy Python Certificate">
+      </div>
+      <div class="slides">
+        <img src="./asserts/Endla Vivek soc.png" alt="Google Cloud Certificate">
+      </div>
+      <div class="slides">
+        <img src="./asserts/hev certificate.jpg" alt="Internship Certificate">
+      </div>
+     
+      
+  
+      <!-- Navigation Buttons -->
+      <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+      <button class="next" onclick="changeSlide(1)">&#10095;</button>
+  
+      <!-- Dot Indicators -->
+      <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+    </section>
     
     <div class="container" id="contactme">
         <div class="row">
@@ -244,9 +248,9 @@
     </div>
    
     </div>
-     <div class="copyright">
-        <p>Copyright &copy; Endla Vivek.All rights reserved.</p>
-    </div>
+    <div class="copyright">
+      <p>Copyright &copy; Endla Vivek.All rights reserved.</p>
+  </div>
     
   </div>
 
@@ -278,6 +282,28 @@
         })
         .catch(error => console.error('Error!', error.message))
     })
+
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function changeSlide(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let slides = document.querySelectorAll(".slides");
+      let dots = document.querySelectorAll(".dot");
+      if (n > slides.length) slideIndex = 1;
+      if (n < 1) slideIndex = slides.length;
+      slides.forEach(slide => slide.style.display = "none");
+      dots.forEach(dot => dot.className = dot.className.replace(" active", ""));
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
   </script>
    
     
