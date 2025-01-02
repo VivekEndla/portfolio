@@ -409,7 +409,7 @@ form input,form textarea{
         margin-top: -150px;
         height: 200px;
         position: absolute;
-        left: 20px;
+/*         left: 20px; */
         
     }  
     .navbar-toggler{
